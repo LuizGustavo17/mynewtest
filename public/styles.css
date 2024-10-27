@@ -95,7 +95,7 @@ body{
     border-right:2px solid gray;
 }
 .obj-3-4 {
-    position: absolute; 
+    position: fixed; 
     bottom: 0px;      
     right: 0px;       
     width: 100px;      
