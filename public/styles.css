@@ -1,0 +1,114 @@
+/* Define o contêiner flexível */
+body{
+    margin:0;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .column-1-4 {
+    display: flex; /* Adicionado */
+    flex-direction: column; /* Adicionado */
+    justify-content: flex-start; /* Muda para iniciar no topo */
+    flex: 1;
+    background-color: #b9b8b8;
+    border: 1px solid gray;
+    position: relative; /* Necessário para posicionar a .obj */
+}
+  
+  .column-3-4 {
+    flex: 3;
+    background-color: #e0dfdf;
+    border: 1px solid gray;
+    overflow-y: scroll;
+    position: relative; /* Define um contexto de empilhamento para a posição absoluta */
+  }
+  .vertical-line {
+    margin-top: calc(50vh - 65px);
+    width: 100%; /* Ocupa toda a largura da coluna */
+    height: 130px; /* Altura da linha */
+    background-color: rgb(165, 163, 163); /* Cor da linha */
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    text-align: center;
+  }
+
+  #quantity{
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+  }
+  input[type="number"] {
+    width: 30%; /* Largura do campo de entrada */
+    padding: 5px; /* Espaçamento interno */
+    border: 2px solid gray; /* Borda do campo de entrada */
+    height: 20px;
+    text-align:center;
+    background-color: #e0dfdf;
+    font-family: "Roboto", sans-serif;
+    color: black; /* Cor do placeholder (pode mudar para a cor desejada) */
+    font-size: 22px; /* Tamanho da fonte do placeholder (pode ajustar conforme necessário) */
+    opacity: 1; /* Para garantir que a cor seja totalmente opaca */
+}
+    input[type="number"]::placeholder {
+    font-family: "Roboto", sans-serif;
+    color: black; /* Cor do placeholder (pode mudar para a cor desejada) */
+    font-size: 22px; /* Tamanho da fonte do placeholder (pode ajustar conforme necessário) */
+    opacity: 1; /* Para garantir que a cor seja totalmente opaca */
+} 
+
+.item{
+        height:130px;
+        width:90%;
+        background-color: rgb(165, 163, 163); /* Cor da linha */
+        margin-top:48px;
+        margin-left:48px;
+        border: 2px solid gray;
+}
+#items-container:last-child {
+    margin-bottom: 16px; /* Adiciona uma margem inferior de 16px ao último item */
+}
+.circle{
+    border-radius: 50%;
+    background-color: #e0dfdf;
+    align-items: center;
+    margin:16px;
+    height:100px;
+    width:100px;
+    border: 2px solid rgb(173, 172, 172);
+    text-align: center;
+}
+#number{
+    font-size: 48px;
+    font-family: "Roboto", sans-serif;
+    margin-top: 22px;
+    font-weight: 400;
+}
+.obj-1-4{
+    margin-top: auto;
+    height:100px;
+    width:100px;
+    margin-left:0;
+    border-top: 2px solid gray;
+    border-right:2px solid gray;
+}
+.obj-3-4 {
+    position: absolute; /* Faz com que a div seja posicionada em relação ao seu pai (column-3-4) */
+    bottom: 0px;      /* Distância do fundo da coluna */
+    right: 0px;       /* Distância da direita da coluna */
+    width: 100px;      /* Largura da div */
+    height: 100px;      /* Altura da div */
+    background-color: lightgray; /* Cor de fundo (pode ser alterada) */
+    border-top: 2px solid gray; /* Borda da div */
+    border-left: 2px solid gray; /* Borda da div */
+    z-index: 10;       /* Garante que a div apareça acima de outros elementos */
+}
+.title{
+    font-family: "Roboto", sans-serif;
+    font-size:32px;
+    font-weight: 400;
+    margin-left:6px;
+    margin-top:32px
+}
